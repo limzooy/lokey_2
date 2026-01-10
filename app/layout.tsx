@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
     description: '로우키하지만 확실한, 우리 세대의 라이프스타일',
     type: 'website',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-5695434271475936',
+  },
 }
 
 export default function RootLayout({
@@ -19,15 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <head>
-        <meta name="google-adsense-account" content="ca-pub-5695434271475936" />
-        <script
+      <body>
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
-      </head>
-      <body>{children}</body>
+        {children}
+      </body>
     </html>
   )
 }
