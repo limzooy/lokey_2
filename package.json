@@ -17,13 +17,20 @@
     "@types/node": "^25.0.5",
     "@types/react": "^19.2.8",
     "autoprefixer": "^10.4.20",
+<<<<<<< HEAD
     "google-spreadsheet": "^5.0.2",
+=======
+>>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
     "next": "^16.1.1",
     "postcss": "^8.4.49",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "tailwindcss": "^3.4.18",
+<<<<<<< HEAD
     "typescript": "^5.9.3",
     "zod": "^4.3.5"
+=======
+    "typescript": "^5.9.3"
+>>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
   }
 }

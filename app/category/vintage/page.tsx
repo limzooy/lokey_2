@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 export default function VintageCategoryPage() {
   const posts = [
     {
+<<<<<<< HEAD
       slug: 'vintage-finds',
+=======
+      slug: 'vintage',
+>>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
       title: "왜 다시 '빈티지 무드'가 주목받고 있을까?",
       excerpt: '새것보다 오래된 것의 가치를 찾는 움직임.',
       date: '2026.01.09'

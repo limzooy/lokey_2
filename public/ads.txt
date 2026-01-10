@@ -1,2 +1,1 @@
-# This file will be populated with your Google AdSense publisher ID after approval.
-# Format: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-5695434271475936, DIRECT, f08c47fec0942fa0

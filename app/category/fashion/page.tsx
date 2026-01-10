@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 export default function FashionCategoryPage() {
   const posts = [
     {
+<<<<<<< HEAD
       slug: 'quiet-luxury-fashion',
+=======
+      slug: 'fashion',
+>>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
       title: "요즘 20대가 선택하는 'LoKey 패션'의 공통점",
       excerpt: '과하지 않지만 분명한, 요즘 세대의 패션 코드를 분석했다.',
       date: '2026.01.10'

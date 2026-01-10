@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 export default function LowAlcoholCategoryPage() {
   const posts = [
     {
+<<<<<<< HEAD
       slug: 'low-alcohol-living',
+=======
+      slug: 'low-alcohol',
+>>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
       title: "요즘 20대가 '저도수 술'을 선택하는 이유",
       excerpt: '취하기보다 즐기는, 새로운 음주 문화의 시작.',
       date: '2026.01.08'
