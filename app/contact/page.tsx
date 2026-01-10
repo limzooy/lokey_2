@@ -39,7 +39,7 @@ export default function ContactPage() {
           <section>
             <h2 className="text-2xl font-medium text-white mb-4">Email</h2>
             <p className="text-white">
-              wndus7330@naver.com
+              limjy0524@naver.com
             </p>
             <p className="text-sm text-neutral-400 mt-2">
               * 이메일은 예시이며, 실제 운영 시 업데이트될 예정입니다.
