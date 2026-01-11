@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -9,11 +10,7 @@ export const metadata: Metadata = {
 export default function FashionCategoryPage() {
   const posts = [
     {
-<<<<<<< HEAD
-      slug: 'quiet-luxury-fashion',
-=======
       slug: 'fashion',
->>>>>>> c08bdfa8a51feba8240a285505323e9d31b2d4cc
       title: "요즘 20대가 선택하는 'LoKey 패션'의 공통점",
       excerpt: '과하지 않지만 분명한, 요즘 세대의 패션 코드를 분석했다.',
       date: '2026.01.10'
@@ -22,21 +19,6 @@ export default function FashionCategoryPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="border-b border-neutral-800">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-medium">
-            _Lokey_
-          </Link>
-          <nav className="flex gap-8 text-sm">
-            <Link href="/about" className="hover:text-neutral-400">About</Link>
-            <Link href="/category" className="hover:text-neutral-400">Category</Link>
-            <Link href="/contact" className="hover:text-neutral-400">Contact</Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-20">
         <div className="mb-12">
           <Link href="/category" className="text-sm text-neutral-400 hover:text-white mb-4 inline-block">
@@ -62,22 +44,6 @@ export default function FashionCategoryPage() {
           ))}
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="border-t border-neutral-800 mt-20">
-        <div className="max-w-6xl mx-auto px-6 py-8">
-          <div className="flex justify-between items-center">
-            <p className="text-sm text-neutral-400">
-              © 2026 Lokey. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm text-neutral-400">
-              <Link href="/privacy" className="hover:text-white">Privacy</Link>
-              <Link href="/terms" className="hover:text-white">Terms</Link>
-              <Link href="/contact" className="hover:text-white">Contact</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

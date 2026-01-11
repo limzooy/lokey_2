@@ -1,15 +1,15 @@
-
 'use server'
 
 import { z } from 'zod'
 
 const schema = z.object({
-  email: z.string().email({ message: "Invalid email address." }),
-  name: z.string().min(1, { message: "Name is required." }),
-  message: z.string().min(1, { message: "Message is required." }),
+  email: z.string().email({ message: "유효한 이메일 주소를 입력해주세요." }),
+  name: z.string().min(1, { message: "이름을 입력해주세요." }),
+  message: z.string().min(1, { message: "메시지를 입력해주세요." }),
 })
 
 export async function saveEmail(prevState: any, formData: FormData) {
+  /*
   const validatedFields = schema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
@@ -19,20 +19,22 @@ export async function saveEmail(prevState: any, formData: FormData) {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Validation failed. Please check your input.',
+      message: '입력 내용을 다시 확인해주세요.',
     }
   }
   
   try {
-    // Here you would typically save the data to a database
-    // or send an email. For this example, we'll just simulate success.
-    console.log("Received contact form submission:", validatedFields.data);
+    // 데이터를 데이터베이스에 저장하거나 이메일을 보내는 로직이 여기에 들어갑니다.
+    // 현재는 성공을 시뮬레이션합니다.
+    console.log("문의 폼 제출 받음:", validatedFields.data);
     
-    return { message: 'Thank you for your message! We will get back to you soon.', errors: null }
+    return { message: '메시지를 보내주셔서 감사합니다! 곧 회신드리겠습니다.', errors: null }
   } catch (error) {
     return {
-      message: 'An unexpected error occurred. Please try again later.',
+      message: '예상치 못한 오류가 발생했습니다. 나중에 다시 시도해주세요.',
       errors: null,
     }
   }
+  */
+ return { message: '현재 문의 기능을 점검 중입니다. 죄송합니다.', errors: null }
 }

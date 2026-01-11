@@ -1,9 +1,9 @@
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from 'next/script';
 import "./globals.css";
 import Link from "next/link";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +16,6 @@ export const metadata: Metadata = {
     description: '로우키하지만 확실한, 우리 세대의 라이프스타일',
     type: 'website',
   },
-  other: {
-    'google-adsense-account': 'ca-pub-5695434271475936',
-  },
 };
 
 export default function RootLayout({
@@ -28,14 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="dark">
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3253024840653769"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200`}>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        
         <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
           <div className="container mx-auto px-6 py-4 flex justify-between items-center">
             <Link href="/" className="text-3xl font-bold text-gray-900 dark:text-white tracking-wider">
