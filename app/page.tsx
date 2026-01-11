@@ -5,7 +5,7 @@ import Image from 'next/image';
 const posts = [
   {
     slug: "fashion",
-    title: "요즘 20대가 선택하는 'LoKey 패션'의 공통점",
+    title: "요즘 선택되는 'LoKey 패션'의 공통점",
     category: "Fashion",
     image: "/post1.png",
   },
@@ -39,10 +39,10 @@ export default function Homepage() {
           />
         </div>
         <h1 className="text-5xl font-medium mb-4">
-          요즘 20대의<br />조용한 취향 코드
+          최근<br />조용한 취향 코드
         </h1>
         <p className="text-xl text-neutral-400">
-          로우키하지만 확실한, 우리 세대의 라이프스타일
+          로우키하지만 확실한, 우리의 라이프스타일
         </p>
       </section>
 
