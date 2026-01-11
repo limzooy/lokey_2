@@ -39,7 +39,7 @@ export default function Homepage() {
           />
         </div>
         <h1 className="text-5xl font-medium mb-4">
-          최근<br />조용한 취향 코드
+        <br />Quite Taste Code_Lokey
         </h1>
         <p className="text-xl text-neutral-400">
           로우키하지만 확실한, 우리의 라이프스타일
@@ -84,7 +84,7 @@ export default function Homepage() {
         <h2 className="text-2xl font-medium">Weekly Curated</h2>
         <div className="border border-neutral-800 rounded-2xl p-8">
           <h3 className="text-xl font-medium mb-3">
-            요즘 20대가 선택하는 &apos;LoKey 패션&apos;의 공통점
+            요즘 20대가 선택하는 &apos;LoKey 패션&apos;
           </h3>
           <p className="text-neutral-400 mb-4">
             조용하지만 분명한 취향의 흐름을 정리했다.
