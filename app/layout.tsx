@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     description: '로우키하지만 확실한, 우리 세대의 라이프스타일',
     type: 'website',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-5695434271475936',
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +30,7 @@ export default function RootLayout({
     <html lang="ko" className="dark">
       <Script
         async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3253024840653769"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
         crossOrigin="anonymous"
         strategy="afterInteractive"
       />
