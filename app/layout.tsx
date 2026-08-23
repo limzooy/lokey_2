@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import Script from "next/script";
 
 import { categories } from "@/content/posts";
 import { siteUrl } from "@/content/site";
@@ -33,6 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/*
+          애드센스 로더는 next/script 가 아니라 <head> 안의 순수 script 태그로 둔다.
+          next/script 를 쓰면 태그에 data-nscript 속성이 붙어 애드센스가
+          "AdSense head tag doesn't support data-nscript attribute" 경고를 낸다.
+          (afterInteractive / beforeInteractive 둘 다 동일)
+        */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.className} bg-black text-neutral-200`}>
         <header className="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-neutral-800">
           <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -95,12 +107,6 @@ export default function RootLayout({
           </div>
         </footer>
 
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
