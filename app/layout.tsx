@@ -5,10 +5,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 import { categories } from "@/content/posts";
+import { siteUrl } from "@/content/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "LoKey - 조용한 취향 코드",
   description: "20-30대가 조용히 소비하는 패션·빈티지·저도수 라이프스타일 트렌드를 큐레이션하는 미디어 플랫폼",
   keywords: ['패션', '빈티지', '저도수 술', '라이프스타일', '트렌드', 'quiet luxury', 'lokey'],
