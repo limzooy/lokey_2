@@ -80,9 +80,46 @@ export default function PostPage({ params }: Props) {
               </h2>
             )}
             <p>{section.body}</p>
+
+            {section.image && (
+              <figure className="mt-8">
+                <Image
+                  src={section.image}
+                  alt={section.imageAlt ?? ''}
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-2xl border border-neutral-800"
+                />
+                {section.caption && (
+                  <figcaption className="mt-3 text-sm text-neutral-500">
+                    {section.caption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
           </section>
         ))}
       </div>
+
+      {post.sources && post.sources.length > 0 && (
+        <div className="mt-16 pt-8 border-t border-neutral-800">
+          <h2 className="text-sm font-medium text-neutral-400 mb-4">데이터 출처</h2>
+          <ul className="space-y-2 text-sm">
+            {post.sources.map((source) => (
+              <li key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-white underline underline-offset-4 transition-colors"
+                >
+                  {source.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {related.length > 0 && (
         <div className="mt-20 pt-8 border-t border-neutral-800">
