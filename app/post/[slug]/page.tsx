@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
-import Comments from '@/components/Comments';
 import {
   formatDate,
   getCategory,
@@ -160,7 +159,6 @@ export default function PostPage({ params }: Props) {
           </div>
         </div>
       )}
-      <Comments slug={post.slug} />
     </article>
   );
 }

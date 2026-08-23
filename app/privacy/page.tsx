@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         <div className="space-y-8 text-neutral-300 leading-relaxed">
           <section>
             <p className="text-sm text-neutral-400 mb-6">
-              최종 수정일: 2026년 8월 23일
+              최종 수정일: 2026년 1월 10일
             </p>
             <p>
               LoKey(&quot;회사&quot; 또는 &quot;우리&quot;)는 귀하의 개인정보를 중요하게 생각합니다.
@@ -31,22 +31,6 @@ export default function PrivacyPage() {
               <li>방문자 통계 (Google Analytics)</li>
               <li>쿠키 및 유사 기술을 통한 웹사이트 이용 데이터</li>
               <li>이메일을 통한 문의 시 제공하는 연락처 정보</li>
-              <li>댓글 작성 시 입력하는 닉네임, 비밀번호, 댓글 내용</li>
-              <li>댓글 도배 방지를 위한 접속 IP (원문이 아닌 해시값으로만 저장)</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">1-1. 댓글 관련 안내</h2>
-            <p className="mb-3">
-              댓글 기능은 회원가입 없이 이용할 수 있으며, 다음과 같이 처리됩니다.
-            </p>
-            <ul className="space-y-2 list-disc list-inside">
-              <li>비밀번호는 암호화(bcrypt)되어 저장되며, 원문은 저장하지 않습니다. 본인 댓글 삭제 확인 용도로만 사용됩니다.</li>
-              <li>접속 IP는 원문 대신 복원이 불가능한 해시값으로 저장하며, 짧은 시간 안의 반복 작성을 막는 데에만 사용합니다.</li>
-              <li>닉네임과 댓글 내용은 웹사이트에 공개됩니다. 개인을 식별할 수 있는 정보는 입력하지 말아 주세요.</li>
-              <li>삭제한 댓글은 화면에서 즉시 사라지며, 분쟁 대응을 위해 일정 기간 보관된 후 파기됩니다.</li>
-              <li>비밀번호를 분실한 경우 복구할 수 없으므로, 삭제가 필요하면 문의 페이지로 요청해 주세요.</li>
             </ul>
           </section>
 
@@ -57,8 +41,6 @@ export default function PrivacyPage() {
               <li>웹사이트 성능 개선 및 사용자 경험 향상</li>
               <li>콘텐츠 큐레이션 및 맞춤화</li>
               <li>문의에 대한 응답</li>
-              <li>댓글 게시 및 작성자 본인 확인</li>
-              <li>스팸·도배 방지</li>
               <li>광고 게재 (Google AdSense)</li>
             </ul>
           </section>

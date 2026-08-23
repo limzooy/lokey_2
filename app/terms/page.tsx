@@ -16,7 +16,7 @@ export default function TermsPage() {
         <div className="space-y-8 text-neutral-300 leading-relaxed">
           <section>
             <p className="text-sm text-neutral-400 mb-6">
-              최종 수정일: 2026년 8월 23일
+              최종 수정일: 2026년 1월 10일
             </p>
             <p>
               LoKey 웹사이트를 이용함으로써 귀하는 본 이용약관에 동의하는 것으로 간주됩니다.
@@ -51,21 +51,6 @@ export default function TermsPage() {
               <li>법률 및 규정을 위반하는 행위 금지</li>
               <li>타인의 권리를 침해하는 행위 금지</li>
               <li>웹사이트의 정상적인 운영을 방해하는 행위 금지</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-medium text-white mb-4">3-1. 댓글 등 이용자 게시물</h2>
-            <p className="mb-3">
-              이용자가 작성한 댓글의 저작권과 책임은 작성자 본인에게 있습니다.
-              다음에 해당하는 게시물은 사전 통지 없이 삭제될 수 있습니다.
-            </p>
-            <ul className="space-y-2 list-disc list-inside">
-              <li>타인을 비방하거나 명예를 훼손하는 내용</li>
-              <li>욕설, 차별, 혐오 표현</li>
-              <li>광고, 홍보, 스팸성 반복 게시물</li>
-              <li>타인의 개인정보나 저작권을 침해하는 내용</li>
-              <li>법령을 위반하는 내용</li>
             </ul>
           </section>
 
