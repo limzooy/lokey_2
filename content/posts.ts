@@ -34,6 +34,16 @@ export type Source = {
   url: string;
 };
 
+/**
+ * 발행 후 사실관계가 바뀌었을 때 글 맨 위에 붙는 정정 알림.
+ * 원문을 몰래 고치지 않고 무엇이 틀렸는지 남긴다.
+ */
+export type Correction = {
+  date: string;
+  body: string;
+  link?: { label: string; slug: string };
+};
+
 export type Post = {
   slug: string;
   title: string;
@@ -46,6 +56,7 @@ export type Post = {
   sections: Section[];
   /** 데이터 기반 글이면 출처를 남긴다. 독자가 검증할 수 있어야 한다. */
   sources?: Source[];
+  correction?: Correction;
 };
 
 export const categories: Category[] = [
@@ -221,6 +232,19 @@ export const posts: Post[] = [
     image: '/post3.png',
     imageAlt: '저도수 술',
     lead: "과거의 음주 문화는 '빨리, 많이'였다면, 요즘은 '천천히, 적당히'로 변하고 있다. 저도수 술이 주목받는 이유는 무엇일까?",
+    correction: {
+      date: '2026-08-23',
+      body:
+        '이 글은 소비자가 하드셀처·과일주·논알코올 등 다른 주종으로 옮겨가고 있다고 서술했습니다. ' +
+        '이후 국세통계연보의 주종별 출고량을 직접 확인한 결과, 희석식 소주의 비중은 2005년 28.64%에서 ' +
+        '2021년 29.35%로 오히려 늘었고, 주종 교체를 뒷받침하는 근거는 확인되지 않았습니다. ' +
+        '실제로 확인된 변화는 소주 자체의 도수가 낮아진 것이었습니다. ' +
+        '원문은 기록을 위해 고치지 않고 그대로 둡니다.',
+      link: {
+        label: '국세청 데이터로 검증한 글 보기',
+        slug: 'low-alcohol-data',
+      },
+    },
     sections: [
       {
         heading: '1. 건강에 대한 관심',
