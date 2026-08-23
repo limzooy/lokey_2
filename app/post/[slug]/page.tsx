@@ -61,7 +61,7 @@ export default function PostPage({ params }: Props) {
       {post.correction && (
         <aside className="mb-10 border border-neutral-700 rounded-2xl p-6 bg-neutral-950">
           <p className="text-sm font-medium text-white mb-3">
-            정정 · {formatDate(post.correction.date)}
+            {post.correction.label ?? '정정'} · {formatDate(post.correction.date)}
           </p>
           <p className="text-sm text-neutral-400 leading-relaxed">
             {post.correction.body}
