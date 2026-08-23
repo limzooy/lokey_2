@@ -1,9 +1,10 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Script from "next/script";
+
+import { categories } from "@/content/posts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,67 +22,83 @@ export const metadata: Metadata = {
   },
 };
 
+const navLinkStyle = "text-neutral-400 hover:text-white transition-colors";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="dark">
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
-      <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200`}>
-        <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
-          <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-            <Link href="/" className="text-3xl font-bold text-gray-900 dark:text-white tracking-wider">
+    <html lang="ko">
+      <body className={`${inter.className} bg-black text-neutral-200`}>
+        <header className="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-neutral-800">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <Link href="/" className="text-2xl font-medium tracking-wider text-white">
               LoKey
             </Link>
-            <nav className="space-x-8 hidden md:flex items-center">
-              <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">홈</Link>
-              <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">소개</Link>
-               <div className="relative group">
-                <button className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors focus:outline-none">
-                  카테고리
-                </button>
-                <div className="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 invisible group-hover:visible">
-                  <Link href="/category/fashion" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">패션</Link>
-                  <Link href="/category/vintage" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">빈티지</Link>
-                  <Link href="/category/low-alcohol" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">저도수</Link>
+
+            <nav className="hidden md:flex items-center space-x-8 text-sm">
+              <Link href="/" className={navLinkStyle}>홈</Link>
+              <Link href="/about" className={navLinkStyle}>소개</Link>
+              <div className="relative group py-2">
+                <Link href="/category" className={navLinkStyle}>카테고리</Link>
+                <div className="absolute left-0 top-full w-40 bg-black border border-neutral-800 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200">
+                  {categories.map((category) => (
+                    <Link
+                      key={category.slug}
+                      href={`/category/${category.slug}`}
+                      className="block px-4 py-2 text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
+                    >
+                      {category.korean}
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <Link href="/contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">문의</Link>
+              <Link href="/contact" className={navLinkStyle}>문의</Link>
             </nav>
-            {/* Mobile menu button could be added here */}
+
+            {/* 모바일: 드롭다운 대신 카테고리를 한 줄로 펼쳐 보여준다 */}
+            <nav className="flex md:hidden items-center gap-4 text-sm">
+              <Link href="/category" className={navLinkStyle}>카테고리</Link>
+              <Link href="/about" className={navLinkStyle}>소개</Link>
+              <Link href="/contact" className={navLinkStyle}>문의</Link>
+            </nav>
           </div>
         </header>
-        
+
         <main className="min-h-screen">
           {children}
         </main>
-        
-        <footer className="bg-white dark:bg-gray-800 mt-16 border-t dark:border-gray-700">
-          <div className="container mx-auto px-6 py-8">
-            <div className="flex justify-between items-center">
-                <div>
-                  <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white tracking-wider">LoKey</Link>
-                  <p className="text-gray-500 dark:text-gray-400 mt-2">조용한 럭셔리, 절제된 취향.</p>
-                </div>
-                <div className="flex space-x-6">
-                  <Link href="/about" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">소개</Link>
-                  <Link href="/contact" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">문의</Link>
-                  <Link href="/privacy" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">개인정보처리방침</Link>
-                  <Link href="/terms" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">이용약관</Link>
-                </div>
+
+        <footer className="border-t border-neutral-800 mt-20">
+          <div className="max-w-6xl mx-auto px-6 py-10">
+            <div className="flex flex-col sm:flex-row justify-between gap-6">
+              <div>
+                <Link href="/" className="text-xl font-medium tracking-wider text-white">
+                  LoKey
+                </Link>
+                <p className="text-neutral-500 mt-2 text-sm">조용한 럭셔리, 절제된 취향.</p>
+              </div>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                <Link href="/about" className={navLinkStyle}>소개</Link>
+                <Link href="/contact" className={navLinkStyle}>문의</Link>
+                <Link href="/privacy" className={navLinkStyle}>개인정보처리방침</Link>
+                <Link href="/terms" className={navLinkStyle}>이용약관</Link>
+              </div>
             </div>
-            <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-               <p>&copy; {new Date().getFullYear()} LoKey. All Rights Reserved.</p>
+            <div className="mt-8 border-t border-neutral-800 pt-6 text-center text-sm text-neutral-500">
+              <p>&copy; {new Date().getFullYear()} LoKey. All Rights Reserved.</p>
             </div>
           </div>
         </footer>
+
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5695434271475936"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
