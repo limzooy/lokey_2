@@ -12,17 +12,17 @@ export default function Homepage() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="mb-12">
           <Image
-            src="/main.png"
-            alt="LoKey Brand Image"
-            width={1200}
-            height={600}
+            src="/chart-search-trend.png"
+            alt="20대의 '저도수·하이볼' 검색량은 2022년 403으로 정점을 찍은 뒤 2026년 33까지 떨어져, 붐이 시작되기 전인 2016년 수준보다 낮아졌다"
+            width={1400}
+            height={784}
             className="w-full h-auto rounded-2xl"
             priority
           />
         </div>
-        <h1 className="text-5xl font-medium mb-4">Quiet Taste Code_Lokey</h1>
+        <h1 className="text-5xl font-medium mb-4">요즘 뜬다는 말, 확인해봤습니다</h1>
         <p className="text-xl text-neutral-400">
-          로우키하지만 확실한, 우리의 라이프스타일
+          국세통계·질병관리청·네이버 데이터랩으로 직접 열어본 기록. 대체로 절반만 맞았습니다.
         </p>
       </section>
 
