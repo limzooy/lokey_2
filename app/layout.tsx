@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "LoKey - 조용한 취향 코드",
-  description: "20-30대가 조용히 소비하는 패션·빈티지·저도수 라이프스타일 트렌드를 큐레이션하는 미디어 플랫폼",
-  keywords: ['패션', '빈티지', '저도수 술', '라이프스타일', '트렌드', 'quiet luxury', 'lokey'],
+  title: "LoKey - 트렌드를 데이터로 확인합니다",
+  description: "\"요즘 이게 유행\"이라는 말을 국세통계·질병관리청·네이버 데이터랩 같은 공개 데이터로 직접 확인합니다. 확인 과정과 한계를 함께 공개합니다.",
+  keywords: ['데이터 분석', '트렌드 검증', '팩트체크', '공공데이터', '국세통계', '네이버 데이터랩', '검색량 분석', 'lokey'],
   openGraph: {
-    title: 'LoKey - 조용한 취향 코드',
-    description: '로우키하지만 확실한, 우리의 라이프스타일',
+    title: 'LoKey - 트렌드를 데이터로 확인합니다',
+    description: '요즘 뜬다는 말, 공개 데이터로 확인해봤습니다',
     type: 'website',
   },
   other: {
@@ -92,7 +92,7 @@ export default function RootLayout({
                 <Link href="/" className="text-xl font-medium tracking-wider text-white">
                   LoKey
                 </Link>
-                <p className="text-neutral-500 mt-2 text-sm">조용한 럭셔리, 절제된 취향.</p>
+                <p className="text-neutral-500 mt-2 text-sm">요즘 뜬다는 말, 공개 데이터로 확인해봤습니다.</p>
               </div>
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
                 <Link href="/about" className={navLinkStyle}>소개</Link>

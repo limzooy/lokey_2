@@ -5,7 +5,7 @@ import { categories, getPostsByCategory } from '@/content/posts';
 
 export const metadata: Metadata = {
   title: 'Categories - LoKey',
-  description: '패션, 빈티지, 저도수 술까지, LoKey가 큐레이션하는 카테고리',
+  description: 'LoKey가 공개 데이터로 확인한 주제들',
 };
 
 export default function CategoryPage() {

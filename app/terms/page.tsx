@@ -27,8 +27,9 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-medium text-white mb-4">1. 서비스 개요</h2>
             <p>
-              LoKey는 트렌드 큐레이션 및 분석 콘텐츠를 제공하는 미디어 플랫폼입니다.
+              LoKey는 공개 데이터로 트렌드 주장을 확인하고 그 과정을 공개하는 미디어입니다.
               우리는 정보 제공 목적으로만 콘텐츠를 게시하며, 직접적인 제품 판매는 하지 않습니다.
+              게시된 분석은 공개 통계에 근거한 해석이며, 투자·구매 등의 의사결정 조언이 아닙니다.
             </p>
           </section>
 
